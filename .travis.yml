@@ -34,5 +34,7 @@ notifications:
       - alessandro.rodi@renuo.ch
     on_success: change
     on_failure: change
+before_install:
+  - gem update bundler
 script:
   - bundle exec rubocop && bundle exec rake
