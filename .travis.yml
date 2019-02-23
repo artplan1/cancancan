@@ -36,5 +36,6 @@ notifications:
     on_failure: change
 before_install:
   - gem update bundler
+  - bundle config build.nokogiri --use-system-libraries
 script:
   - bundle exec rubocop && bundle exec rake
